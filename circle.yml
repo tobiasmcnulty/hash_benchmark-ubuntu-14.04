@@ -1,6 +1,10 @@
 machine:
   post:
-    - pyenv global 2.7.7 2.7.8 3.3.3 3.4.3 3.5.0
+    - pyenv global 2.7.7 3.3.3 3.4.3 3.5.0
+dependencies:
+  override:
+    - pip install -U tox tox-pyenv
+    - pyenv local 2.7.7 3.3.3 3.4.3 3.5.0
 test:
   override:
     - tox
