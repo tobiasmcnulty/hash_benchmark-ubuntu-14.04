@@ -8,3 +8,6 @@ dependencies:
 test:
   override:
     - tox
+    - tox -e py27-dj110 -- --algorithm=argon2 --time_cost=2 --memory_cost=1536 --parallelism=64
+    - tox -e py34-dj110 -- --algorithm=argon2 --time_cost=2 --memory_cost=1536 --parallelism=64
+    - tox -e py35-dj110 -- --algorithm=argon2 --time_cost=2 --memory_cost=1536 --parallelism=64
